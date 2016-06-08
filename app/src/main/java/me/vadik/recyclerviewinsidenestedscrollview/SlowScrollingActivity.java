@@ -8,20 +8,19 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 
 import me.vadik.recyclerviewinsidenestedscrollview.adapter.MyAdapter;
 
-public class ScrollingActivity extends AppCompatActivity {
+public class SlowScrollingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrolling);
+        setContentView(R.layout.activity_slow_scrolling);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        MyHelper.setupRecyclerView(this, 1000);
+        RecyclerView recyclerView = MyHelper.setupRecyclerView(this, 1000);
+        recyclerView.setNestedScrollingEnabled(false);
     }
 }
