@@ -1,10 +1,10 @@
-package me.vadik.recyclerviewinsidenestedscrollview;
+package me.vadik.recyclerviewinsidenestedscrollview.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import me.vadik.recyclerviewinsidenestedscrollview.adapter.MyAdapter;
+import me.vadik.recyclerviewinsidenestedscrollview.R;
 
 /**
  * User: vadik
@@ -12,7 +12,7 @@ import me.vadik.recyclerviewinsidenestedscrollview.adapter.MyAdapter;
  */
 public class MyHelper {
 
-    protected static RecyclerView setupRecyclerView(Activity context, int count) {
+    public static RecyclerView setupRecyclerView(Activity context, int count) {
         RecyclerView mRecyclerView = (RecyclerView) context.findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(context);
